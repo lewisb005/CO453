@@ -1,5 +1,8 @@
-﻿using System;
+﻿using ConsoleAppProject.App01;
+using ConsoleAppProject.App03;
+using ConsoleAppProject.Helpers;
 
+using System;
 namespace ConsoleAppProject.App01
 {
     /// <summary>
@@ -33,13 +36,14 @@ namespace ConsoleAppProject.App01
 
         private void InputMiles()
         {
-            
+            Console.Write{ "please enter the number of miles > "};
+                string value = Console.ReadLine();
+            miles = Convert.Todouble(value);
 
         }
         private void CalculateFeet()
-        {
-
-        }
+        { }
+        
         private void OutputFeet()
         {
 
