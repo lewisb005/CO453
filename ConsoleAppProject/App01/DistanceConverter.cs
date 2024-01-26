@@ -19,8 +19,12 @@ namespace ConsoleAppProject.App01
         /// </summary>
 
         public void Run()
-        { 
+        {
+            InputMiles();
+            CalculateFeet();
+            OutputFeet();
 
+ 
         }
         /// <summary>
         /// Prompt the user to enter the distance in miles
@@ -29,6 +33,7 @@ namespace ConsoleAppProject.App01
 
         private void InputMiles()
         {
+            
 
         }
         private void CalculateFeet()
