@@ -15,9 +15,13 @@ namespace ConsoleAppProject.App01
     {
         public const int FEET_IN_MILES = 5280;
 
+        public const double METRES_IN_MILES = 1609.34;
+
         private double miles;
 
         private double feet;
+
+        private double metres; 
 
         /// <summary>
         /// This method will input the distance measured in miles
@@ -25,7 +29,7 @@ namespace ConsoleAppProject.App01
         /// distance in feet.
         /// </summary>
 
-        public void Run()
+        public void MilesToFeet()
         {
             OutputHeading();
             InputMiles();
@@ -34,10 +38,21 @@ namespace ConsoleAppProject.App01
 
  
         }
-        private void OutputHeading()
+        private void FeetToMiles()
         {
-            throw new NotImplemenentedException();
+            OutputHeading();
+            InputMiles();
+            CalculateFeet();
+            OutputFeet();
         }
+        private void MilesToMetres()
+        {
+            OutputHeading();
+            InputMiles();
+            CalculateFeet();
+            OutputFeet();
+        }
+
         /// <summary>
         /// Prompt the user to enter the distance in miles
         /// Input the miles as a double number
