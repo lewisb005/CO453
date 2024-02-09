@@ -3,7 +3,8 @@ using ConsoleAppProject.App03;
 using ConsoleAppProject.Helpers;
 using System;
 
-namespace ConsoleAppProject
+
+namespace Console
 {
     /// <summary>
     /// The main method in this class is called first
