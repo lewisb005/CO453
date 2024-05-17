@@ -3,89 +3,85 @@ using ConsoleAppProject.App03;
 using ConsoleAppProject.Helpers;
 
 using System;
+
 namespace ConsoleAppProject.App01
 {
-    /// <summary>
-    /// Please describe the main features of this App
-    /// </summary>
-    /// <author>
-    /// Lewis version 0.1
-    /// </author>
-    public class DistanceConverter
+    using ConsoleAppProject.App01;
+    using ConsoleAppProject.App03;
+    using ConsoleAppProject.Helpers;
+
+    using System;
+
+    namespace DistanceConverter
     {
-        public const int FEET_IN_MILES = 5280;
-
-        public const double METRES_IN_MILES = 1609.34;
-
-        private double miles;
-
-        private double feet;
-
-        private double metres; 
-
-        /// <summary>
-        /// This method will input the distance measured in miles
-        /// calculate the same distance in feet, and output the 
-        /// distance in feet.
-        /// </summary>
-
-        public void MilesToFeet()
+        class DistanceConverter
         {
-            OutputHeading();
-            InputMiles();
-            CalculateFeet();
-            OutputFeet();
+            private static void Main(string[] args)
+            { 
+                Console.WriteLine("Distance Converter App");
+                Console.WriteLine("1. Miles to Feet");
+                Console.WriteLine("2. Feet to Miles");
+                Console.WriteLine("3. Miles to Metres");
+                Console.WriteLine("4. Metres to Miles");
+                Console.WriteLine("5. Metres to Feet");
+                Console.WriteLine("6. Feet to Metres");
 
- 
+                Console.Write("Enter your choice (1/2/3/4/5/6): ");
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        Console.Write("Enter distance in miles: ");
+                        double milesToFeet = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Distance in feet: " + DistanceUnits.MilesToFeet(milesToFeet));
+                        break;
+                    case 2:
+                        Console.Write("Enter distance in feet: ");
+                        double feetToMiles = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Distance in miles: " + DistanceUnits.FeetToMiles(feetToMiles));
+                        break;
+                    case 3:
+                        Console.Write("Enter distance in miles: ");
+                        double milesToMetres = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Distance in metres: " + DistanceUnits.MilesToMetres(milesToMetres));
+                        break;
+                    case 4:
+                        Console.Write("Enter distance in metres: ");
+                        double metresToMiles = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Distance in miles: " + DistanceUnits.MetresToMiles(metresToMiles));
+                        break;
+                    case 5:
+                        Console.Write("Enter distance in metres: ");
+                        double metresToFeet = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Distance in feet: " + DistanceUnits.MetresToFeet(metresToFeet));
+                        break;
+                    case 6:
+                        Console.Write("Enter distance in feet: ");
+                        double feetToMetres = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Distance in metres: " + DistanceUnits.FeetToMetres(feetToMetres));
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice");
+                        break;
+                }
+            }
+
+            internal void FeetToMiles()
+            {
+                throw new NotImplementedException();
+            }
+
+            internal void MilesToFeet()
+            {
+                throw new NotImplementedException();
+            }
+
+            internal void MilesToMetres()
+            {
+                throw new NotImplementedException();
+            }
         }
-        private void FeetToMiles()
-        {
-            OutputHeading();
-            InputMiles();
-            CalculateFeet();
-            OutputFeet();
-        }
-        private void MilesToMetres()
-        {
-            OutputHeading();
-            InputMiles();
-            CalculateFeet();
-            OutputFeet();
-        }
-
-        /// <summary>
-        /// Prompt the user to enter the distance in miles
-        /// Input the miles as a double number
-        /// </summary>
-
-        private void InputMiles()
-        {
-            Console.Write{ "please enter the number of miles > "};
-                string value = Console.ReadLine();
-            miles = Convert.ToDouble(value);
-
-        }
-        private void CalculateFeet()
-        {
-         public const int  FEET_IN_MILES = 5280;
-        }
-        
-        private void OutputFeet()
-        {
-        Console.WriteLine(miles + "miles is" + feet +
-            "feet!");
-        }
-   private void ConvertMilesToFeet()
-    {
-        OutputHeading();
-        InputMiles();
-
-        feet = miles * FEET_IN_MILES;
-
-        OutputFeet();
-    }
-   
-
-
     }
 }
+    
